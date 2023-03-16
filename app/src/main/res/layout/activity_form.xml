@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backDark"
+    tools:context=".FormActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/materialToolbar"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:background="@color/surfaceDark"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/formBackButton"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="4dp"
+        android:background="#00FFFFFF"
+        android:padding="10dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/materialToolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/materialToolbar"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_24"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/saveAlarmButton"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginEnd="4dp"
+        android:background="#00FFFFFF"
+        android:padding="10dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/materialToolbar"
+        app:layout_constraintEnd_toEndOf="@+id/materialToolbar"
+        app:layout_constraintTop_toTopOf="@+id/materialToolbar"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_baseline_check_24"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/deleteAlarmButton"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:background="#00FFFFFF"
+        android:padding="10dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/materialToolbar"
+        app:layout_constraintEnd_toStartOf="@+id/saveAlarmButton"
+        app:layout_constraintTop_toTopOf="@+id/materialToolbar"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_outline_delete_24"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="32dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="32dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColorHint="@color/white"
+        app:boxBackgroundColor="@color/white"
+        app:boxBackgroundMode="filled"
+        app:boxStrokeColor="@color/white"
+        app:boxStrokeWidth="1dp"
+        app:counterTextColor="@color/white"
+        app:helperTextTextColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/guideline6"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/materialToolbar">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/surfaceDark"
+            android:hint="Nombre"
+            android:shadowColor="@color/orange"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TimePicker
+        android:id="@+id/timePicker1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:amPmBackgroundColor="@color/orange"
+        android:amPmTextColor="@color/orange"
+        android:background="@color/surfaceDark"
+        android:backgroundTint="@color/surfaceDark"
+        android:headerBackground="@color/surfaceDark"
+        android:numbersBackgroundColor="#FFF"
+        android:numbersInnerTextColor="@color/white"
+        android:numbersSelectorColor="@color/orange"
+        android:timePickerMode="clock"
+        app:layout_constraintEnd_toStartOf="@+id/guideline6"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="button2,button5,button3,button7,button6,button8,button4" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="43dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="16dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:paddingLeft="0dp"
+        android:paddingTop="0dp"
+        android:paddingRight="0dp"
+        android:paddingBottom="0dp"
+        android:text="L"
+        android:textColor="@color/white"
+        app:cornerRadius="0dp"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/timePicker1" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="43dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="16dp"
+        android:text="M"
+        android:textColor="@color/white"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        app:cornerRadius="0dp"
+        app:layout_constraintStart_toEndOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/timePicker1" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="43dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="16dp"
+        android:text="M"
+        android:textColor="@color/white"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        app:cornerRadius="0dp"
+        app:layout_constraintStart_toEndOf="@+id/button3"
+        app:layout_constraintTop_toBottomOf="@+id/timePicker1" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="43dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="16dp"
+        android:text="J"
+        android:textColor="@color/white"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        app:cornerRadius="0dp"
+        app:layout_constraintStart_toEndOf="@+id/button4"
+        app:layout_constraintTop_toBottomOf="@+id/timePicker1" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="43dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="16dp"
+        android:text="V"
+        android:textColor="@color/white"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        app:cornerRadius="0dp"
+        app:layout_constraintStart_toEndOf="@+id/button5"
+        app:layout_constraintTop_toBottomOf="@+id/timePicker1" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="43dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="16dp"
+        android:text="S"
+        android:textColor="@color/white"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        app:cornerRadius="0dp"
+        app:layout_constraintStart_toEndOf="@+id/button6"
+        app:layout_constraintTop_toBottomOf="@+id/timePicker1" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="43dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="5dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="D"
+        android:textColor="@color/white"
+        app:cornerRadius="0dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline6"
+        app:layout_constraintStart_toEndOf="@+id/button7"
+        app:layout_constraintTop_toBottomOf="@+id/timePicker1"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:buttonTint="@color/orange"
+        android:text="Desactivar en días festivos"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/guideline6"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Máximo de aplazamientos*"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/guideline6"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/slider"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:stepSize="1"
+        android:valueFrom="0.0"
+        android:valueTo="20.0"
+        app:layout_constraintEnd_toStartOf="@+id/guideline6"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:thumbColor="@color/white"
+        app:tickColorActive="@color/orange"
+        app:trackColorActive="@color/orange"
+        app:trackColorInactive="@color/white" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Método de apagado*"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/guideline6"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/slider" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
